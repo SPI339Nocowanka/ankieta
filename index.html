@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiada - Ankieta Szkolna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="survey-container">
+        <h1 id="question-title">Pytanie 1</h1>
+        <div id="question-text"></div>
+        <form id="survey-form">
+            <div id="options-container" class="options-container"></div>
+            <button type="submit" id="next-btn" class="next-btn">Dalej</button>
+        </form>
+    </div>
+
+    <div class="container" id="end-screen" style="display: none;">
+        <h1>Koniec ankiety!</h1>
+        <p>Dziękujemy za udział w naszej ankiecie.</p>
+        <a href="admin.html" class="admin-link">Panel administracyjny</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiada - Wyniki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h1>Panel administracyjny</h1>
+        <form id="login-form">
+            <input type="password" id="password" placeholder="Hasło" required>
+            <button type="submit">Zaloguj</button>
+        </form>
+    </div>
+
+    <div class="container" id="results-container" style="display: none;">
+        <h1>Wyniki ankiety Familiada</h1>
+        <div id="results"></div>
+        <button id="refresh-btn">Odśwież wyniki</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
