@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const questions = [
     {
       question: "Pytanie 1",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+      options: ["Odpowiedźsss 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
                "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
     },
     {
