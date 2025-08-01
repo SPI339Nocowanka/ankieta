@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (localStorage.getItem('hasVoted')) {
     form.style.display = 'none';
-    messageDiv.textContent = 'Już brałeś udział w naszej ankiecie. Dzięki! ❤️';
+    messageDiv.textContent = 'Już brałeś udział w naszej ankiecie. Dzięki!';
     messageDiv.className = 'success';
   }
 });
