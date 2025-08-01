@@ -5,80 +5,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const questions = [
     {
-      question: "Co można znaleźć w łazience",
+      question: "Co można znaleźć w łazience?",
       options: ["Wanna", "Toaleta", "Umywalka", "Przysznic", "Papier Toaletowy", 
                "Szczoteczka do zębów", "Chemikalia", "Ręcznik", "Suszarka", "Lustro"]
     },
     {
-      question: "sss",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Czego boją się ludzie?",
+      options: ["Pająków", "Wyskości", "Ciemności", "Śmierci", "Węż", 
+               "Kartkówka", "Porwania", "Małych przestrzeni", "Duchów / Potworów", "Horrorów"]
     },
     {
-      question: "Pytanie 3",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Ulubionny przedmiot w szkole?",
+      options: ["J. Polski", "Matematyka", "J. Angielski", "Historia", "Geografia", 
+               "Biologia", "Chemia", "Fizyka", "WF", "Informatyka"]
     },
     {
-      question: "Pytanie 4",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Najbardziej nie lubiany przedmiot w szkole?",
+      options: ["J. Polski", "Matematyka", "J. Angielski", "Historia", "Geografia", 
+               "Biologia", "Chemia", "Fizyka", "WF", "Informatyka"]
     },
     {
-      question: "Pytanie 5",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Ulubiona gra komputerowa?",
+      options: ["Minecraft", "CS2", "Roblox", "Fortnie", "League of Legends", 
+               "Simsy", "Call of Duty", "GTA", "War Thunder", "Wiedzimin", "Among us", "BattleField", "Fallout", "Team Fortress"]
     },
     {
-      question: "Pytanie 6",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Podaj przykład czegoś co lata?",
+      options: ["Samolot", "Ptak", "Latawiec", "Motyl", "Mucha", 
+               "Balon", "Dron", "Helikopter", "Szybowiec", "Komar"]
     },
     {
-      question: "Pytanie 7",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co robimy na urodzinach?",
+      options: ["Jemy tort", "Śpiewamy 'Sto lat'", "Dajemy prezenty", "Robimy zdjęcia", "Tańczymy", 
+               "Gramy w gry", "Składamy życzenia", "Dekorujemy", "Otwieramy prezenty", "Rozmawiamy"]
     },
     {
-      question: "Pytanie 8",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co zabieramy na plażę?",
+      options: ["Ręcznik", "Krem z filtrem", "Parasol", "Klapki", "Strój kąpielowy", 
+               "Wodę", "Okulary przeciwsłoneczne", "Książkę", "Piłkę", "Koc"]
     },
     {
-      question: "Pytanie 9",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co znajduje się w plecaku ucznia?",
+      options: ["Zeszyty", "Podręczniki", "Piórnik", "Drugie śniadanie", "Telefon", 
+               "Bidon", "Strój na WF", "Plastelina", "Linijka", "Kalendarz szkolny"]
     },
     {
-      question: "Pytanie 10",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co robimy rano?",
+      options: ["Myjemy zęby", "Ubieramy się", "Jemy śniadanie", "Wstajemy", "Robimy kawę", 
+               "Szykujemy się do pracy/szkoły", "Sprawdzamy telefon", "Budzik dzwoni", "Myjemy się", "Pakujemy plecak"]
     },
     {
-      question: "Pytanie 11",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co można znaleźć w kuchni?",
+      options: ["Lodówka", "Kuchenka", "Zlew", "Naczynia", "Garnek", 
+               "Sztućce", "Kawa", "Czajnik", "Mikrofalówka", "Stół"]
     },
     {
-      question: "Pytanie 12",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co może być gorące?",
+      options: ["Kawa", "Zupa", "Słońce", "Piekarnik", "Herbata", 
+               "Żelazko", "Patelnia", "Grzejnik", "Woda", "Pizza"]
     },
     {
-      question: "Pytanie 13",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co robimy na wakacjach?",
+      options: ["Odpoczywamy", "Pływamy", "Zwiedzamy", "Opalamy się", "Gramy w gry", 
+               "Czytamy książki", "Robimy zdjęcia", "Jemy lody", "Chodzimy po górach", "Śpimy"]
     },
     {
-      question: "Pytanie 14",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co może być zielone?",
+      options: ["Trawa", "Liść", "Ogórek", "Zielony groszek", "Jabłko", 
+               "Zielone światło", "Papryka", "Szpinak", "Dinozaur (w kreskówkach)", "Kapusta"]
     },
     {
-      question: "Pytanie 15",
-      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co robimy w zimie?",
+      options: ["Lepimy bałwana", "Jeździmy na sankach", "Ubieramy się ciepło", "Grzejemy się", "Jemy pierniki", 
+               "Pijemy herbatę", "Jeździmy na nartach", "Słuchamy kolęd", "Rzucamy śnieżkami", "Czekamy na święta"]
     }
+
   ];
 
   // Generuj pytania na stronie
