@@ -1,0 +1,365 @@
+:root {
+  --bg-color: #121212;
+  --container-bg: #1e1e1e;
+  --text-color: #f0f0f0;
+  --primary: #9c27b0;
+  --secondary: #673ab7;
+  --accent: #ff9800;
+  --border: #333;
+  --success: #4caf50;
+  --error: #f44336;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  margin-bottom: 1.5rem;
+  border-radius: 0 0 15px 15px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* Formularz */
+#surveyForm {
+  background: var(--container-bg);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.question {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
+
+.question h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.option {
+  display: block;
+  margin: 0.6rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1.1rem;
+  width: 1.1rem;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+}
+
+.option:hover .checkmark {
+  background: rgba(156, 39, 176, 0.2);
+}
+
+.option input:checked ~ .checkmark {
+  background: var(--primary);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 0;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.option input:checked ~ .checkmark:after {
+  display: block;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+#message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  display: none;
+}
+
+.success {
+  background: var(--success);
+  display: block !important;
+}
+
+.error {
+  background: var(--error);
+  display: block !important;
+}
+
+/* Wyniki */
+#passwordSection {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+#passwordInput {
+  padding: 0.8rem;
+  width: 70%;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+#resultsContainer {
+  display: none;
+}
+
+.result-item {
+  background: var(--container-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.result-question {
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+.result-option {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  margin-bottom: 0.3rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+}
+
+.top-answer {
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+}
+
+/* Desktop (≥992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  header {
+    padding: 2.5rem 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #questions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .question {
+    transition: transform 0.3s;
+    margin-bottom: 0;
+  }
+
+  .question:hover {
+    transform: translateY(-5px);
+  }
+
+  button {
+    width: auto;
+    padding: 0.8rem 2rem;
+    display: block;
+    margin: 2rem auto 0;
+    transition: all 0.3s;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+    background: var(--secondary);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .result-item {
+    margin-bottom: 0;
+  }
+}
+
+/* Tablet (768px-991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  #questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Punkty - nowe style */
+.points {
+  background: var(--accent);
+  color: #000;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.question-points {
+  text-align: right;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--primary);
+  font-size: 0.9rem;
+}
+
+.total-points {
+  background: var(--container-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.total-points h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.total-points strong {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Responsywność punktów */
+@media (min-width: 768px) {
+  .points {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .question-points {
+    font-size: 1rem;
+  }
+}
+/* Dodaj te style do istniejącego CSS */
+.points {
+  background: var(--accent);
+  color: #000;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.question-points {
+  text-align: right;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--primary);
+  font-size: 0.9rem;
+}
+
+.total-points {
+  background: var(--container-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.total-points h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.total-points strong {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.top-answer {
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+}
