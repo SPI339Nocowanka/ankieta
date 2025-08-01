@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const questionsDiv = document.getElementById('questions');
   const messageDiv = document.getElementById('message');
 
-  // Wszystkie 15 pytań z 10 odpowiedziami każdy
   const questions = [
     {
       question: "Co można znaleźć w łazience",
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   questions.forEach((qData, index) => {
     const questionDiv = document.createElement('div');
     questionDiv.className = 'question';
-    questionDiv.innerHTML = `<h3>${qData.question}</h3>`;
+    questionDiv.innerHTML = `<h3>${index + 1}. ${qData.question}</h3>`;
     
     qData.options.forEach((option, optionIndex) => {
       questionDiv.innerHTML += `
@@ -113,9 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (selected) {
         answers.push({ 
           q: index + 1, 
-          a: parseInt(selected.value),
-          question: questions[index].question,
-          answer: questions[index].options[selected.value - 1]
+          a: parseInt(selected.value)
         });
         answeredCount++;
       }
@@ -136,12 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const result = await response.json();
       if (result.success) {
-        messageDiv.textContent = 'Dziękujemy za udział w ankiecie!';
+        messageDiv.textContent = 'Dzięki za udział w ankiecie! 🎉';
         messageDiv.className = 'success';
         form.style.display = 'none';
         localStorage.setItem('hasVoted', 'true');
       } else {
-        throw new Error(result.error || 'Wystąpił błąd');
+        throw new Error(result.error || 'Coś poszło nie tak...');
       }
     } catch (err) {
       messageDiv.textContent = err.message;
@@ -151,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (localStorage.getItem('hasVoted')) {
     form.style.display = 'none';
-    messageDiv.textContent = 'Już uczestniczyłeś w tej ankiecie. Dziękujemy!';
+    messageDiv.textContent = 'Już brałeś udział w naszej ankiecie. Dzięki! ❤️';
     messageDiv.className = 'success';
   }
 });
