@@ -3,6 +3,84 @@ document.addEventListener('DOMContentLoaded', async () => {
   const showResultsBtn = document.getElementById('showResultsBtn');
   const resultsContainer = document.getElementById('resultsContainer');
 
+  const questions = [
+    {
+      question: "Co można znaleźć w łazience",
+      options: ["Wanna", "Toaleta", "Umywalka", "Przysznic", "Papier Toaletowy", 
+               "Szczoteczka do zębów", "Chemikalia", "Ręcznik", "Suszarka", "Lustro"]
+    },
+    {
+      question: "sss",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 3",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 4",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 5",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 6",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 7",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 8",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 9",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 10",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 11",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 12",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 13",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 14",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    },
+    {
+      question: "Pytanie 15",
+      options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
+               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+    }
+  ];
+
   showResultsBtn.addEventListener('click', async () => {
     if (passwordInput.value !== 'test1234') {
       alert('❌ Nieprawidłowe hasło! Spróbuj ponownie.');
@@ -22,28 +100,24 @@ document.addEventListener('DOMContentLoaded', async () => {
       results.forEach((question, qIndex) => {
         const questionDiv = document.createElement('div');
         questionDiv.className = 'result-item';
-        questionDiv.innerHTML = `<div class="result-question">Pytanie ${qIndex + 1}</div>`;
+        questionDiv.innerHTML = `<div class="result-question">${questions[qIndex].question}</div>`;
         
-        // Przygotuj i posortuj odpowiedzi
         const answersData = question.map((votes, aIndex) => ({
-          answer: aIndex + 1,
+          text: questions[qIndex].options[aIndex],
           votes: votes || 0
         })).sort((a, b) => b.votes - a.votes);
         
-        // Oblicz punkty dynamicznie na podstawie najlepszej odpowiedzi
         const maxVotes = answersData[0]?.votes || 1;
         let questionPoints = 0;
         
-        // Współczynniki punktowe (proporcjonalne do głosów)
         const pointValues = [
-          Math.round(maxVotes * 1.0),  // 1. miejsce - 100%
-          Math.round(maxVotes * 0.7),  // 2. miejsce - 70%
-          Math.round(maxVotes * 0.5),  // 3. miejsce - 50%
-          Math.round(maxVotes * 0.3),  // 4. miejsce - 30%
-          Math.round(maxVotes * 0.1)   // 5. miejsce - 10%
+          Math.round(maxVotes * 1.0),
+          Math.round(maxVotes * 0.7),
+          Math.round(maxVotes * 0.5),
+          Math.round(maxVotes * 0.3),
+          Math.round(maxVotes * 0.1)
         ];
         
-        // Wyświetl 5 najlepszych odpowiedzi
         answersData.slice(0, 5).forEach((item, index) => {
           const points = pointValues[index] || 0;
           questionPoints += points;
@@ -52,7 +126,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           answerDiv.className = `result-option ${index < 3 ? 'top-answer' : ''}`;
           
           answerDiv.innerHTML = `
-            <span>Odpowiedź ${item.answer}: ${item.votes} ${item.votes === 1 ? 'głos' : 'głosów'}</span>
+            <span>${item.text}: ${item.votes} ${item.votes === 1 ? 'głos' : 'głosów'}</span>
             <span class="points">+${points}pkt</span>
           `;
           questionDiv.appendChild(answerDiv);
@@ -60,7 +134,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         totalPoints += questionPoints;
 
-        // Dodaj podsumowanie punktów
         questionDiv.innerHTML += `
           <div class="question-points">
             Suma punktów: <strong>${questionPoints}pkt</strong>
@@ -70,7 +143,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         grid.appendChild(questionDiv);
       });
 
-      // Podsumowanie ogólne
       header.innerHTML = `
         <div class="total-points">
           <h3>Podsumowanie</h3>
