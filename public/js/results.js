@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     },
     {
       question: "Ulubiona gra komputerowa?",
-      options: ["Minecraft", "CS2", "Roblox", "Fortnie", "League of Legends", 
+      options: ["Minecraft", "CS2", "Roblox", "Valorant💀", "Fortnie", "League of Legends💀", 
                "Simsy", "Call of Duty", "GTA", "War Thunder", "Wiedzimin", "Among us", "BattleField", "Fallout", "Team Fortress"]
     },
     {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     {
       question: "Co może być gorące?",
       options: ["Kawa", "Zupa", "Słońce", "Piekarnik", "Herbata", 
-               "Żelazko", "Patelnia", "Grzejnik", "Woda", "Pizza"]
+               "Żelazko", "Patelnia", "Grzejnik", "Woda", "Pizza", "Kolega z ławki"]
     },
     {
       question: "Co robimy na wakacjach?",
