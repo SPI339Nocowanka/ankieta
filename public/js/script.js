@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Wszystkie 15 pytań z 10 odpowiedziami każdy
   const questions = [
     {
-      question: "Pytanie 1",
-      options: ["Odpowiedźsss 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
-               "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
+      question: "Co można znaleźć w łazience",
+      options: ["Wanna", "Toaleta", "Umywalka", "Przysznic", "Papier Toaletowy", 
+               "Szczoteczka do zębów", "Chemikalia", "Ręcznik", "Suszarka", "Lustro"]
     },
     {
-      question: "Pytanie 2",
+      question: "sss",
       options: ["Odpowiedź 1", "Odpowiedź 2", "Odpowiedź 3", "Odpowiedź 4", "Odpowiedź 5", 
                "Odpowiedź 6", "Odpowiedź 7", "Odpowiedź 8", "Odpowiedź 9", "Odpowiedź 10"]
     },
